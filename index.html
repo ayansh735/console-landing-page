@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>Gamers || Play Game Like Pro</title>
+  </head>
+  <body>
+    <section class="banner">
+      <header>
+        <a href="#" class="logo">GAME</a>
+        <div class="toggle" onclick="toggle();"></div>
+      </header>
+      <div class="content">
+        <div class="contentBx">
+          <h2>PLAY GAME<br />LIKE PRO</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            molestiae odio magni totam dolor, eum repellendus maiores facere
+            aliquam similique ipsum, quo magnam commodi natus minima qui? Nemo,
+            sunt iste.
+          </p>
+          <a href="#">GET STARTED</a>
+        </div>
+        <div class="imgBx">
+          <img src="images/game.png" />
+        </div>
+      </div>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="images/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/instagram.png" /></a>
+        </li>
+      </ul>
+      <ul class="nav">
+        <li style="--i: 2"><a href="#" class="active">Home</a></li>
+        <li style="--i: 3"><a href="#">About</a></li>
+        <li style="--i: 4"><a href="#">Products</a></li>
+        <li style="--i: 5"><a href="#">Store</a></li>
+        <li style="--i: 6"><a href="#">Contact</a></li>
+      </ul>
+    </section>
+    <script>
+      let menu = document.querySelector(".toggle");
+      let banner = document.querySelector(".banner");
+      let header = document.querySelector("header");
+
+      const toggle = () => {
+        menu.classList.toggle("active");
+        banner.classList.toggle("active");
+      };
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+  </body>
+</html>
